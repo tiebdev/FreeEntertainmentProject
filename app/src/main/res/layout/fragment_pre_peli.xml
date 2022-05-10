@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/FondoLilaSuave">
+
+    <ImageView
+        android:id="@+id/imgPrePeli"
+        android:layout_width="325dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.074" />
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:textStyle="bold"
+        android:layout_width="600dp"
+        android:layout_height="57dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toEndOf="@+id/imgPrePeli"
+        app:layout_constraintTop_toTopOf="@id/imgPrePeli" />
+
+    <TextView
+        android:id="@+id/textViewDescripcion"
+        android:layout_width="650dp"
+        android:layout_height="415dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textSize="19sp"
+        android:fontFamily="@font/montserrat"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintStart_toEndOf="@+id/imgPrePeli"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
+
+    <ImageView
+        android:id="@+id/playButton"
+        android:layout_width="325dp"
+        android:layout_height="185dp"
+        android:src="@drawable/ic_ver_video_play_boton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescripcion"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

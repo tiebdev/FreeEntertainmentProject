@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.freeentproject.ui.fragments.InicioFragment"
+        android:label="InicioFragment" >
+        <action
+            android:id="@+id/action_inicioFragment_pop"
+            app:popUpTo="@id/inicioFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/radioFragment"
+        android:name="com.example.freeentproject.ui.fragments.RadioFragment"
+        android:label="RadioFragment" >
+        <action
+            android:id="@+id/action_radioFragment_to_playRadioFragment"
+            app:destination="@id/playRadioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playRadioFragment"
+        android:name="com.example.freeentproject.ui.fragments.PlayRadioFragment"
+        android:label="PlayRadioFragment" >
+        <argument
+            android:name="radio"
+            app:argType="com.example.freeentproject.domain.models.ModeloRadio" />
+    </fragment>
+    <fragment
+        android:id="@+id/peliFragment"
+        android:name="com.example.freeentproject.ui.fragments.PeliFragment"
+        android:label="PeliFragment" >
+        <action
+            android:id="@+id/action_peliFragment_to_prePeliFragment"
+            app:destination="@id/prePeliFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/prePeliFragment"
+        android:name="com.example.freeentproject.ui.fragments.PrePeliFragment"
+        android:label="PrePeliFragment" >
+        <action
+            android:id="@+id/action_prePeliFragment_to_exoPlayerPlayPeli"
+            app:destination="@id/exoPlayerPlayPeli" />
+        <argument
+            android:name="peli"
+            app:argType="com.example.freeentproject.domain.models.ModeloPeli" />
+    </fragment>
+    <activity
+        android:id="@+id/exoPlayerPlayPeli"
+        android:name="com.example.freeentproject.ui.activitys.ExoPlayerPlayPeli"
+        android:label="activity_exo_player_play_peli"
+        tools:layout="@layout/activity_exo_player_play_peli" />
+    <fragment
+        android:id="@+id/tvFragment"
+        android:name="com.example.freeentproject.ui.fragments.TvFragment"
+        android:label="TvFragment" >
+        <action
+            android:id="@+id/action_tvFragment_to_exoPlayerPlayTv"
+            app:destination="@id/exoPlayerPlayTv" />
+        <argument
+            android:name="tv"
+            app:argType="com.example.freeentproject.domain.models.ModeloTv" />
+    </fragment>
+    <activity
+        android:id="@+id/exoPlayerPlayTv"
+        android:name="com.example.freeentproject.ui.activitys.ExoPlayerPlayTv"
+        android:label="activity_exo_player_play_tv"
+        tools:layout="@layout/activity_exo_player_play_tv" />
+    <fragment
+        android:id="@+id/futbolFragment"
+        android:name="com.example.freeentproject.ui.fragments.FutbolFragment"
+        android:label="FutbolFragment" >
+        <action
+            android:id="@+id/action_futbolFragment_to_santanderFragment"
+            app:destination="@id/santanderFragment" />
+        <action
+            android:id="@+id/action_futbolFragment_to_smartbankFragment"
+            app:destination="@id/smartbankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/santanderFragment"
+        android:name="com.example.freeentproject.ui.fragments.SantanderFragment"
+        android:label="SantanderFragment" >
+        <action
+            android:id="@+id/action_santanderFragment_to_exoPlayerPlayResumen"
+            app:destination="@id/exoPlayerPlayResumen" />
+        <argument
+            android:name="liga"
+            app:argType="com.example.freeentproject.domain.models.ModeloLiga" />
+    </fragment>
+    <fragment
+        android:id="@+id/smartbankFragment"
+        android:name="com.example.freeentproject.ui.fragments.SmartbankFragment"
+        android:label="SmartbankFragment" >
+        <action
+            android:id="@+id/action_smartbankFragment_to_exoPlayerPlayResumen"
+            app:destination="@id/exoPlayerPlayResumen" />
+        <argument
+            android:name="liga"
+            app:argType="com.example.freeentproject.domain.models.ModeloLiga" />
+    </fragment>
+    <activity
+        android:id="@+id/exoPlayerPlayResumen"
+        android:name="com.example.freeentproject.ui.activitys.ExoPlayerPlayResumen"
+        android:label="activity_exo_player_play_resumen"
+        tools:layout="@layout/activity_exo_player_play_resumen" />
+</navigation>

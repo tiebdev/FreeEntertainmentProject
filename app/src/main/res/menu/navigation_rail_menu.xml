@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/inicioFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_inicio"
+        android:title="@string/inicio" />
+
+    <item
+        android:id="@+id/peliFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_cine"
+        android:title="@string/cine"/>
+    <item
+        android:id="@+id/tvFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_tv"
+        android:title="@string/television"/>
+    <item
+        android:id="@+id/radioFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_radio"
+        android:title="@string/radio"/>
+
+    <item
+        android:id="@+id/futbolFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_futbol"
+        android:title="@string/futbol"/>
+
+</menu>

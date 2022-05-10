@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FreeEntProject</string>
+    <string name="inicio">INICIO</string>
+    <string name="television">TV</string>
+    <string name="radio">RADIO</string>
+    <string name="cine">CINE</string>
+    <string name="futbol">FUTBOL</string>
+    <string name="pelis">CINE</string>
+    <string name="ligas">LIGAS</string>
+    <string name="teles">CANALES DE TV</string>
+    <string name="emisoras">EMISORAS DE RADIO</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

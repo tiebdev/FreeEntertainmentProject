@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".AppClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app_fep_foreground"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_app_fep_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MaterialComponents.NoActionBar">
+        <activity
+            android:name=".ui.activitys.ExoPlayerPlayTv"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activitys.ExoPlayerPlayResumen"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activitys.ExoPlayerPlayPeli"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activitys.MainActivity"
+            android:exported="true"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

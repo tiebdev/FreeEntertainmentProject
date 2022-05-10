@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "687695590007",
+    "project_id": "freeentproject",
+    "storage_bucket": "freeentproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687695590007:android:15c169d9e052fae70f8c72",
+        "android_client_info": {
+          "package_name": "com.example.freeentproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687695590007-40f45ge970ccbs4hnumd5d71nrk15r1s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAipu0m8Knva7MyFl5jKp2cm-XpKs097Cs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687695590007-40f45ge970ccbs4hnumd5d71nrk15r1s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
