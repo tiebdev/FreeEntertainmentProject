@@ -13,8 +13,15 @@ import com.example.freeentproject.utils.Utils
 import dagger.hilt.android.AndroidEntryPoint
 
 /*
+Fragment previo a reproducir la pelicula seleccionada de la bd. Blindeamos la vista a través del
+viewBinding. Creamos el objeto viewModels y el objeto navArgs() para pasarle el objeto ModeloPeli
+a través del nav_grav (layout). Ya en la vista mostramos en dos TextView el titulo y la descripción,
+un ImageView donde mostraremos el cartel mediante la función Utils que usa la librería Picasso y
+añadimos finalmente un Button para ver el video. Con ese Button viajaremos a la activity que
+reproduce la película. En ese viaje mediante un Intent, enviamos también la url donde se aloja el
+archivo de la película.
+*/
 
- */
 @AndroidEntryPoint
 class PrePeliFragment : Fragment() {
 

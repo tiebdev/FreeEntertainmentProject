@@ -1,4 +1,5 @@
 package com.example.freeentproject.ui.adapters
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +12,7 @@ import com.example.freeentproject.databinding.RecyclerRadioBinding
 import com.example.freeentproject.databinding.RecyclerSantanderBinding
 import com.example.freeentproject.databinding.RecyclerTvBinding
 import com.example.freeentproject.domain.models.*
+import com.example.freeentproject.ui.activitys.ExoPlayerPlayResumen
 
 /*
 Adaptador Padre que nos permite mostrar una lista vertical que contiene otras listas horizontales.
@@ -110,11 +112,8 @@ class AdapterPadre (): RecyclerView.Adapter<ViewHolder>() {
 
         private val binding = RecyclerPeliBinding.bind(itemView)
 
-        init {
-
-        }
-
         fun bind(peli: ModeloHijoPeli) {
+
             val recyclerPeli = AdapterPeli(peli)
             binding.recyclerPelis.layoutManager = LinearLayoutManager(binding.root.context,
                 LinearLayoutManager.HORIZONTAL, false)
@@ -125,10 +124,6 @@ class AdapterPadre (): RecyclerView.Adapter<ViewHolder>() {
     inner class ViewHolder1(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val binding = RecyclerTvBinding.bind(itemView)
-
-        init {
-
-        }
 
         fun bind(tv: ModeloHijoTv) {
             val recyclerTv = AdapterTv(tv)
@@ -142,10 +137,6 @@ class AdapterPadre (): RecyclerView.Adapter<ViewHolder>() {
 
         private val binding = RecyclerRadioBinding.bind(itemView)
 
-        init {
-
-        }
-
         fun bind(radio: ModeloHijoRadio) {
             val recyclerRadio = AdapterRadio(radio)
             binding.recyclerRadio.layoutManager = LinearLayoutManager(binding.root.context,
@@ -157,10 +148,6 @@ class AdapterPadre (): RecyclerView.Adapter<ViewHolder>() {
     inner class ViewHolder3(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val binding = RecyclerSantanderBinding.bind(itemView)
-
-        init {
-
-        }
 
         fun bind(santander: ModeloHijoSantander) {
             val recyclerRadio = AdapterSantander(santander)

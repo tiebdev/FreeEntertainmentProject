@@ -18,8 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 /*
 Fragment en el que mostramos las dos ligas disponibles en la bd. Añadimos la interface Callback.
 Blindeamos la vista a través del viewBinding. Creamos el objeto viewModels y el objeto
-GridAdapterLigas. Implementamos métodos override para crear, destruir y mostrar las vistas, además
-de filtrar el item seleccionado. Después tenemos un metodo observer() que ejecutamos en el metodo
+GridAdapterLigas. Después tenemos un metodo observer() que ejecutamos en el metodo
 onViewCreated(). A través de la Corrutina conseguimos obtener un "observador" que nos devuelve
 una lista tipo ModeloLiga. Aquí y ahora es posible instanciar el adaptador pasandole esa lista,
 personalizar el adaptador, llamar al metodo de la interface Callback y por último notificamos

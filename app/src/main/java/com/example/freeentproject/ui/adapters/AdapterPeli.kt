@@ -1,4 +1,5 @@
 package com.example.freeentproject.ui.adapters
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,8 @@ import com.example.freeentproject.R
 import com.example.freeentproject.databinding.ListPeliBinding
 import com.example.freeentproject.domain.models.ModeloHijoPeli
 import com.example.freeentproject.domain.models.ModeloPeli
+import com.example.freeentproject.ui.activitys.ExoPlayerPlayPeli
+import com.example.freeentproject.ui.activitys.ExoPlayerPlayResumen
 import com.example.freeentproject.utils.Utils
 
 /*
@@ -39,7 +42,16 @@ class AdapterPeli(var items: ModeloHijoPeli): RecyclerView.Adapter<RecyclerView.
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val binding = ListPeliBinding.bind(itemView)
+
         fun bind(peli: ModeloPeli) {
+
+            itemView.setOnClickListener {
+                val context = itemView.context
+                val intent = Intent(context, ExoPlayerPlayPeli::class.java)
+                intent.putExtra("url", peli.url!!)
+                context.startActivity(intent)
+            }
+
             Utils.loadImage(peli.imagen ?: " ", binding.imgPeli)
         }
     }

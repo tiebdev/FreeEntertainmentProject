@@ -1,4 +1,5 @@
 package com.example.freeentproject.ui.adapters
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,8 @@ import com.example.freeentproject.R
 import com.example.freeentproject.databinding.ListSantanderBinding
 import com.example.freeentproject.domain.models.ModeloHijoSantander
 import com.example.freeentproject.domain.models.ModeloSantander
+import com.example.freeentproject.ui.activitys.ExoPlayerPlayResumen
+import com.example.freeentproject.ui.activitys.ExoPlayerPlayTv
 import com.example.freeentproject.utils.Utils
 
 /*
@@ -41,6 +44,14 @@ class AdapterSantander(var items: ModeloHijoSantander): RecyclerView.Adapter<Rec
         val binding = ListSantanderBinding.bind(itemView)
 
         fun bind(resumen: ModeloSantander) {
+
+            itemView.setOnClickListener {
+                val context = itemView.context
+                val intent = Intent(context, ExoPlayerPlayResumen::class.java)
+                intent.putExtra("url", resumen.url!!)
+                context.startActivity(intent)
+            }
+
             Utils.loadImage(resumen.imagen ?:" ", binding.imgSantander)
         }
     }
