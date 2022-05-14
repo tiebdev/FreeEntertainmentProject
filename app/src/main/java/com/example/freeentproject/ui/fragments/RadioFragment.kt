@@ -11,7 +11,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.freeentproject.databinding.FragmentGridRadioBinding
 import com.example.freeentproject.domain.models.ModeloRadio
-import com.example.freeentproject.ui.adapters.AdapterRadio
 import com.example.freeentproject.ui.adapters.GridAdapterRadio
 import com.example.freeentproject.ui.view_model.RadioFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint

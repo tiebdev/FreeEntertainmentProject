@@ -107,8 +107,10 @@ class ExoPlayerPlayPeli : AppCompatActivity(), Player.Listener {
     }
 
     private fun hideSystemUi() {
-        this.window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        this.window.setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
     }
 
     private fun item(url: String): MediaItem {
