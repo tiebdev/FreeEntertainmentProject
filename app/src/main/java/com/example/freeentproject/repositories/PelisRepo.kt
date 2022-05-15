@@ -27,7 +27,9 @@ class PelisRepo @Inject constructor()  {
                 val url = it.getString("url")
                 val titulo = it.getString("titulo")
                 val descripcion = it.getString("descripcion")
-                ModeloPeli(imagen!!, url!!, titulo!!, descripcion!!)
+                val lenguaje = it.getString("lenguaje")
+                val duracion = it.getString("duracion")
+                ModeloPeli(imagen!!, url!!, titulo!!, descripcion!!, lenguaje!!, duracion!!)
             }
         return inicio
     }
@@ -39,8 +41,28 @@ class PelisRepo @Inject constructor()  {
                 val url = it.getString("url")
                 val titulo = it.getString("titulo")
                 val descripcion = it.getString("descripcion")
-                ModeloPeli(imagen!!, url!!, titulo!!, descripcion!!)
+                val lenguaje = it.getString("lenguaje")
+                val duracion = it.getString("duracion")
+                ModeloPeli(imagen!!, url!!, titulo!!, descripcion!!, lenguaje!!, duracion!!)
             }
         return inicio
+    }
+
+    suspend fun getPelisFavoritasFragmentCorutinas() : List<ModeloPeli> {
+        val inicio : List<ModeloPeli> =
+            db.collection("pelisFav").get().await().documents.map {
+                val imagen = it. getString("imagen")
+                val url = it.getString("url")
+                val titulo = it.getString("titulo")
+                val descripcion = it.getString("descripcion")
+                val lenguaje = it.getString("lenguaje")
+                val duracion = it.getString("duracion")
+                ModeloPeli(imagen!!, url!!, titulo!!, descripcion!!, lenguaje!!, duracion!!)
+            }
+        return inicio
+    }
+
+    suspend fun deletePeli(titulo: String){
+        db.collection("pelisFav").document(titulo).delete().await()
     }
 }

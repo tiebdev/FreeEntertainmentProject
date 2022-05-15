@@ -9,10 +9,13 @@ import android.os.Parcelable
 -Hereda de un Parcelable (necesario para pasar objetos de este tipo entre fragments)
  */
 
-class ModeloPeli (var imagen: String?, var url: String?, var titulo: String?, var descripcion: String?) :
+class ModeloPeli (var imagen: String?, var url: String?, var titulo: String?,
+                  var descripcion: String?, var lenguaje: String?, var duracion: String?) :
     Parcelable {
 
     constructor(parcel: Parcel) : this(
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -24,6 +27,8 @@ class ModeloPeli (var imagen: String?, var url: String?, var titulo: String?, va
         parcel.writeString(url)
         parcel.writeString(titulo)
         parcel.writeString(descripcion)
+        parcel.writeString(lenguaje)
+        parcel.writeString(duracion)
     }
 
     override fun describeContents(): Int {

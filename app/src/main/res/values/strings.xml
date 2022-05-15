@@ -4,10 +4,17 @@
     <string name="television">TV</string>
     <string name="radio">RADIO</string>
     <string name="cine">CINE</string>
+    <string name="cineFav">CINE FAVORITO</string>
     <string name="futbol">FUTBOL</string>
+    <string name="santander">LIGA SANTANDER</string>
+    <string name="smartbank">LIGA SMARTBANK</string>
     <string name="pelis">CINE</string>
     <string name="ligas">LIGAS</string>
+    <string name="fav">Entra en FAVORITOS</string>
+    <string name="jornada">JORNADA 32</string>
     <string name="teles">CANALES DE TV</string>
+    <string name="lenguaje">LENGUAJE: </string>
+    <string name="duracion">DURACION: </string>
     <string name="emisoras">EMISORAS DE RADIO</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>

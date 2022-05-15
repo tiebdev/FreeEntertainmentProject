@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/FondoLilaSuave">
 
     <androidx.cardview.widget.CardView
@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="52dp"
         android:layout_marginTop="51dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/ALBARICOQUE"
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.033"
@@ -24,56 +24,36 @@
             android:layout_marginStart="5dp"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
-            android:text="@string/smartbank"
-            android:textColor="@color/LILA_OSCURO"
+            android:text="@string/cineFav"
+            android:textColor="@color/white"
             android:textSize="35sp"
             android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="570dp"
+        android:layout_width="850dp"
         android:layout_height="8dp"
         android:layout_marginTop="95dp"
-        android:layout_marginEnd="450dp"
+        android:layout_marginEnd="142dp"
         app:cardCornerRadius="15dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/ALBARICOQUE"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/cardv"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardv"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/favBut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="57dp"
-        android:layout_marginStart="860dp"
-        app:cardCornerRadius="15dp"
-        android:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.033"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/favText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center"
-            android:text="@string/jornada"
-            android:textColor="@color/LILA_CLARO"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-    </androidx.cardview.widget.CardView>
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/gridSmartbank"
-        android:layout_width="0dp"
+        android:id="@+id/recyclerPelisFav"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardv" />
+        app:layout_constraintTop_toBottomOf="@+id/cardv"
+        app:layout_constraintVertical_bias="0.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

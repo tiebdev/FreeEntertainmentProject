@@ -36,6 +36,9 @@
         <action
             android:id="@+id/action_peliFragment_to_prePeliFragment"
             app:destination="@id/prePeliFragment" />
+        <action
+            android:id="@+id/action_peliFragment_to_pelisFavoritasFragment"
+            app:destination="@id/pelisFavoritasFragment" />
     </fragment>
     <fragment
         android:id="@+id/prePeliFragment"
@@ -107,4 +110,12 @@
         android:name="com.example.freeentproject.ui.activitys.ExoPlayerPlayResumen"
         android:label="activity_exo_player_play_resumen"
         tools:layout="@layout/activity_exo_player_play_resumen" />
+    <fragment
+        android:id="@+id/pelisFavoritasFragment"
+        android:name="com.example.freeentproject.ui.fragments.PelisFavoritasFragment"
+        android:label="PelisFavoritasFragment" >
+        <action
+            android:id="@+id/action_pelisFavoritasFragment_to_prePeliFragment"
+            app:destination="@id/prePeliFragment" />
+    </fragment>
 </navigation>

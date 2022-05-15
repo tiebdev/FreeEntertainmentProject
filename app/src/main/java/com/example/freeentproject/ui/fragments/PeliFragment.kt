@@ -50,6 +50,7 @@ class PeliFragment: Fragment(), GridAdapterPeli.PelisClickCallback {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         observer()
+        toFragmentFav()
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -67,4 +68,12 @@ class PeliFragment: Fragment(), GridAdapterPeli.PelisClickCallback {
         val direccion = PeliFragmentDirections.actionPeliFragmentToPrePeliFragment(pelicula)
         findNavController().navigate(direccion)
     }
+
+    private fun toFragmentFav(){
+        binding.favBut.setOnClickListener {
+            val direccion = PeliFragmentDirections.actionPeliFragmentToPelisFavoritasFragment()
+            findNavController().navigate(direccion)
+        }
+    }
+
 }
