@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.AttributeSet
 import android.view.View
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.freeentproject.databinding.ActivityExoPlayerPlayRadioBinding
+import com.example.freeentproject.ui.fragments.PelisFavoritasFragmentDirections
 import com.example.freeentproject.utils.Utils
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem

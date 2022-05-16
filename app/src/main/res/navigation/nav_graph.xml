@@ -28,6 +28,9 @@
         <argument
             android:name="radio"
             app:argType="com.example.freeentproject.domain.models.ModeloRadio" />
+        <action
+            android:id="@+id/action_playRadioFragment_to_radioFragment"
+            app:destination="@id/radioFragment" />
     </fragment>
     <fragment
         android:id="@+id/peliFragment"
@@ -93,6 +96,9 @@
         <argument
             android:name="liga"
             app:argType="com.example.freeentproject.domain.models.ModeloLiga" />
+        <action
+            android:id="@+id/action_santanderFragment_to_futbolFragment"
+            app:destination="@id/futbolFragment" />
     </fragment>
     <fragment
         android:id="@+id/smartbankFragment"
@@ -104,6 +110,9 @@
         <argument
             android:name="liga"
             app:argType="com.example.freeentproject.domain.models.ModeloLiga" />
+        <action
+            android:id="@+id/action_smartbankFragment_to_futbolFragment"
+            app:destination="@id/futbolFragment" />
     </fragment>
     <activity
         android:id="@+id/exoPlayerPlayResumen"

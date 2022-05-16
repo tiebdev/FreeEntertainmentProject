@@ -6,12 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.freeentproject.databinding.FragmentPlayRadioBinding
 import com.example.freeentproject.domain.models.ModeloRadio
 import com.example.freeentproject.utils.Utils
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
+import com.google.android.exoplayer2.Player
 import dagger.hilt.android.AndroidEntryPoint
 
 /*
@@ -25,7 +27,7 @@ permite que la música se corte cuando navegamos hacia otro fragment de la aplic
  */
 
 @AndroidEntryPoint
-class PlayRadioFragment: Fragment() {
+class PlayRadioFragment: Fragment(), Player.Listener {
 
     private var _binding: FragmentPlayRadioBinding? = null
     private val binding get() = _binding!!
@@ -46,6 +48,7 @@ class PlayRadioFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Utils.loadImage(radio.imagen ?: " ", binding.imgPlayRadio)
+        back()
     }
 
     override fun onStart() {
@@ -63,21 +66,9 @@ class PlayRadioFragment: Fragment() {
         releasePlayer()
     }
 
-    override fun onResume() {
-        super.onResume()
-        config()
-    }
-
     private fun releasePlayer() {
         player.stop()
         player.release()
-    }
-
-    private fun config() {
-        requireActivity().window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
     }
 
     private fun reproducir() {
@@ -93,6 +84,13 @@ class PlayRadioFragment: Fragment() {
 
     private fun item(url: String): MediaItem {
         return MediaItem.fromUri(Uri.parse(url))
+    }
+
+    private fun back(){
+        binding.back.setOnClickListener {
+            val direcccion = PlayRadioFragmentDirections.actionPlayRadioFragmentToRadioFragment()
+            findNavController().navigate(direcccion)
+        }
     }
 
 }

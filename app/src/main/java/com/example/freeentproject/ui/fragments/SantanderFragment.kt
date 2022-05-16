@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.freeentproject.databinding.FragmentGridSantanderBinding
 import com.example.freeentproject.ui.adapters.GridAdapterSantanderFragment
@@ -47,6 +48,7 @@ class SantanderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         observer()
+        back()
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -57,5 +59,12 @@ class SantanderFragment : Fragment() {
             binding.gridSantander.adapter = adapterSantander
             adapterSantander.notifyDataSetChanged()
         })
+    }
+
+    private fun back(){
+        binding.back.setOnClickListener {
+            val direcccion = SantanderFragmentDirections.actionSantanderFragmentToFutbolFragment()
+            findNavController().navigate(direcccion)
+        }
     }
 }

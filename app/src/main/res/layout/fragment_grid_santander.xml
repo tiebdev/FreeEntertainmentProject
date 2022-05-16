@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textPelis"
+            android:id="@+id/textSantander"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -43,11 +43,11 @@
         app:layout_constraintTop_toBottomOf="@+id/cardv"/>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/favBut"
+        android:id="@+id/textJornada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="57dp"
-        android:layout_marginStart="860dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginStart="725dp"
         app:cardCornerRadius="15dp"
         android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,6 +67,16 @@
             android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="53dp"
+        android:background="@drawable/ic_back"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textJornada"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/gridSantander"
