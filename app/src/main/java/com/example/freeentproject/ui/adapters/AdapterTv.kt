@@ -8,7 +8,6 @@ import com.example.freeentproject.R
 import com.example.freeentproject.databinding.ListTvBinding
 import com.example.freeentproject.domain.models.ModeloHijoTv
 import com.example.freeentproject.domain.models.ModeloTv
-import com.example.freeentproject.ui.activitys.ExoPlayerPlayPeli
 import com.example.freeentproject.ui.activitys.ExoPlayerPlayTv
 import com.example.freeentproject.utils.Utils
 

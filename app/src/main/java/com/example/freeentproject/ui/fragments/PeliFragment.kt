@@ -9,12 +9,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.freeentproject.R
 import com.example.freeentproject.databinding.FragmentGridPeliBinding
 import com.example.freeentproject.domain.models.ModeloPeli
 import com.example.freeentproject.ui.adapters.GridAdapterPeli
 import com.example.freeentproject.ui.view_model.PeliFragmentViewModel
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 
 /*

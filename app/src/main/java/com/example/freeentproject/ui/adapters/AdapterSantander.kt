@@ -9,7 +9,6 @@ import com.example.freeentproject.databinding.ListSantanderBinding
 import com.example.freeentproject.domain.models.ModeloHijoSantander
 import com.example.freeentproject.domain.models.ModeloSantander
 import com.example.freeentproject.ui.activitys.ExoPlayerPlayResumen
-import com.example.freeentproject.ui.activitys.ExoPlayerPlayTv
 import com.example.freeentproject.utils.Utils
 
 /*

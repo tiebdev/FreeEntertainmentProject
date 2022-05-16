@@ -7,13 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.freeentproject.databinding.FragmentInicioBinding
-import com.example.freeentproject.domain.models.ModeloRadio
 import com.example.freeentproject.ui.adapters.AdapterPadre
 import com.example.freeentproject.ui.adapters.AdapterRadio
-import com.example.freeentproject.ui.adapters.GridAdapterRadio
 import com.example.freeentproject.ui.view_model.InicioViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

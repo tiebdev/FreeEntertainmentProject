@@ -9,7 +9,6 @@ import com.example.freeentproject.databinding.ListPeliBinding
 import com.example.freeentproject.domain.models.ModeloHijoPeli
 import com.example.freeentproject.domain.models.ModeloPeli
 import com.example.freeentproject.ui.activitys.ExoPlayerPlayPeli
-import com.example.freeentproject.ui.activitys.ExoPlayerPlayResumen
 import com.example.freeentproject.utils.Utils
 
 /*

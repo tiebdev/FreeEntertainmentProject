@@ -1,5 +1,4 @@
 package com.example.freeentproject.ui.adapters
-
 import android.content.ContentValues
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,7 +7,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.freeentproject.R
 import com.example.freeentproject.databinding.GridFavListPelisBinding
-import com.example.freeentproject.databinding.GridListPeliBinding
 import com.example.freeentproject.domain.models.ModeloPeli
 import com.example.freeentproject.utils.Utils
 import com.google.firebase.firestore.FirebaseFirestore

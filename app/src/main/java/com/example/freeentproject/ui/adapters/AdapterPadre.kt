@@ -1,5 +1,4 @@
 package com.example.freeentproject.ui.adapters
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,6 @@ import com.example.freeentproject.databinding.RecyclerRadioBinding
 import com.example.freeentproject.databinding.RecyclerSantanderBinding
 import com.example.freeentproject.databinding.RecyclerTvBinding
 import com.example.freeentproject.domain.models.*
-import com.example.freeentproject.ui.activitys.ExoPlayerPlayResumen
 
 /*
 Adaptador Padre que nos permite mostrar una lista vertical que contiene otras listas horizontales.
