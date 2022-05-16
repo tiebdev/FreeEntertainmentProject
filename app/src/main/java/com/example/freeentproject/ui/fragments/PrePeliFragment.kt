@@ -85,10 +85,5 @@ class PrePeliFragment : Fragment() {
                     Log.d(ContentValues.TAG, "error")
                 }
         }
-
-        binding.fav.setOnClickListener {
-            binding.fav.setIconTintResource(R.color.ALBARICOQUE)
-            val dbs = FirebaseFirestore.getInstance()
-        }
     }
 }

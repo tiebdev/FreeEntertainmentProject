@@ -48,6 +48,7 @@ class AdapterRadio (var items: ModeloHijoRadio): RecyclerView.Adapter<RecyclerVi
                 val intent = Intent(context, ExoPlayerPlayRadio::class.java)
                 intent.putExtra("url",radio.url!!)
                 intent.putExtra("imagen", radio.imagen!!)
+                intent.putExtra("destacado", "")
                 context.startActivity(intent)
             }
 

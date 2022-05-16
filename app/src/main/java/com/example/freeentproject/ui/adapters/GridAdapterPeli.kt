@@ -56,6 +56,7 @@ class GridAdapterPeli (private var todasPelis: List<ModeloPeli>): RecyclerView.A
 
         fun bind(cine: ModeloPeli) {
             Utils.loadImage((cine.imagen ?: "" ), binding.imgGridPeli)
+            binding.textPelicula.text = cine.titulo
         }
     }
 

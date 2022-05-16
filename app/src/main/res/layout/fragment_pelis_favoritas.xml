@@ -32,6 +32,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/lineaNa"
         android:layout_width="850dp"
         android:layout_height="8dp"
         android:layout_marginTop="95dp"
@@ -42,6 +43,17 @@
         app:layout_constraintLeft_toRightOf="@+id/cardv"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardv"/>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="850dp"
+        android:layout_marginTop="53dp"
+        android:background="@drawable/ic_back"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/lineaNa"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerPelisFav"

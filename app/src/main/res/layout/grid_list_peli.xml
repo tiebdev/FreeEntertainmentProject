@@ -15,4 +15,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textPelicula"
+        android:layout_width="275dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:fontFamily="@font/montserrat"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/imgGridPeli"
+        app:layout_constraintRight_toRightOf="@+id/imgGridPeli"
+        app:layout_constraintLeft_toLeftOf="@+id/imgGridPeli"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
