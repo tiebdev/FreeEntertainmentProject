@@ -3,6 +3,7 @@
     <string name="inicio">INICIO</string>
     <string name="television">TV</string>
     <string name="radio">RADIO</string>
+    <string name="programaDestacado">Programa destacado: </string>
     <string name="cine">CINE</string>
     <string name="cineFav">CINE FAVORITO</string>
     <string name="futbol">FUTBOL</string>

@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
         <activity
+            android:name=".ui.activitys.ExoPlayerPlayRadio"
+            android:exported="false" />
+        <activity
             android:name=".ui.activitys.ExoPlayerPlayTv"
             android:exported="false" />
         <activity

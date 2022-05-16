@@ -16,6 +16,7 @@
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/drawable/ic_delete.xml" value="0.181" />
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/drawable/ic_fav.xml" value="0.181" />
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/activity_exo_player_play_peli.xml" value="0.21331521739130435" />
+        <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/activity_exo_player_play_radio.xml" value="0.14" />
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/activity_exo_player_play_resumen.xml" value="0.1773049645390071" />
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/activity_exo_player_play_tv.xml" value="0.1773049645390071" />
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/activity_main.xml" value="0.1773049645390071" />
@@ -27,8 +28,10 @@
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/fragment_grid_tv.xml" value="0.11359026369168357" />
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/fragment_inicio.xml" value="0.1646403242147923" />
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/fragment_pelis_favoritas.xml" value="0.1767983789260385" />
+        <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/fragment_play_radio.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/fragment_pre_peli.xml" value="0.1" />
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/grid_fav_list_peli.xml" value="0.21693840579710144" />
+        <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/grid_fav_list_pelis.xml" value="0.21693840579710144" />
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/grid_list_futbol.xml" value="0.1773049645390071" />
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/grid_list_peli.xml" value="0.1773049645390071" />
         <entry key="..\:/Users/RidO/Documents/GitHub/FreeEntProject/app/src/main/res/layout/grid_list_radio.xml" value="0.1773049645390071" />

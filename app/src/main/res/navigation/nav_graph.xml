@@ -118,4 +118,9 @@
             android:id="@+id/action_pelisFavoritasFragment_to_prePeliFragment"
             app:destination="@id/prePeliFragment" />
     </fragment>
+    <activity
+        android:id="@+id/exoPlayerPlayRadio"
+        android:name="com.example.freeentproject.ui.activitys.ExoPlayerPlayRadio"
+        android:label="activity_exo_player_play_radio"
+        tools:layout="@layout/activity_exo_player_play_radio" />
 </navigation>

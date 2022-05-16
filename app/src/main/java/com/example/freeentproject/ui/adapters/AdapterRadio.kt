@@ -4,13 +4,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.freeentproject.ui.activitys.ExoPlayerPlayRadio
 import com.example.freeentproject.R
 import com.example.freeentproject.databinding.ListRadioBinding
 import com.example.freeentproject.domain.models.ModeloHijoRadio
-import com.example.freeentproject.domain.models.ModeloLiga
 import com.example.freeentproject.domain.models.ModeloRadio
-import com.example.freeentproject.ui.activitys.ExoPlayerPlayPeli
-import com.example.freeentproject.ui.fragments.RadioFragment
 import com.example.freeentproject.utils.Utils
 
 /*
@@ -36,9 +34,6 @@ class AdapterRadio (var items: ModeloHijoRadio): RecyclerView.Adapter<RecyclerVi
         when (holder) {
             is ViewHolder -> {
                 holder.bind(items.list[position])
-                holder.binding.imgRadio.setOnClickListener {
-
-                }
             }
         }
     }
@@ -47,6 +42,14 @@ class AdapterRadio (var items: ModeloHijoRadio): RecyclerView.Adapter<RecyclerVi
         val binding = ListRadioBinding.bind(itemView)
 
         fun bind(radio: ModeloRadio) {
+
+            itemView.setOnClickListener {
+                val context = itemView.context
+                val intent = Intent(context, ExoPlayerPlayRadio::class.java)
+                intent.putExtra("url",radio.url!!)
+                intent.putExtra("imagen", radio.imagen!!)
+                context.startActivity(intent)
+            }
 
             Utils.loadImage(radio.imagen ?: " ", binding.imgRadio)
         }
