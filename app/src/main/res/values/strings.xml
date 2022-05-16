@@ -11,12 +11,16 @@
     <string name="smartbank">LIGA SMARTBANK</string>
     <string name="pelis">CINE</string>
     <string name="ligas">LIGAS</string>
-    <string name="fav">Entra en FAVORITOS</string>
+    <string name="fav">MIS FAVORITOS</string>
     <string name="jornada">JORNADA 32</string>
     <string name="teles">CANALES DE TV</string>
     <string name="lenguaje">LENGUAJE: </string>
     <string name="duracion">DURACION: </string>
     <string name="emisoras">EMISORAS DE RADIO</string>
+    <string name="tituloDialog">Aviso</string>
+    <string name="mensajeDialog">Las películas eliminadas desaparecerán de su lista cuando vuelva a
+        entrar en mis favoritos.</string>
+    <string name="vale">OK! Gracias!</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

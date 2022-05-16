@@ -117,6 +117,9 @@
         <action
             android:id="@+id/action_pelisFavoritasFragment_to_prePeliFragment"
             app:destination="@id/prePeliFragment" />
+        <action
+            android:id="@+id/action_pelisFavoritasFragment_to_peliFragment"
+            app:destination="@id/peliFragment" />
     </fragment>
     <activity
         android:id="@+id/exoPlayerPlayRadio"
