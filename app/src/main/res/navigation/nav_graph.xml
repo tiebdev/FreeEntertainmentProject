@@ -53,6 +53,9 @@
         <argument
             android:name="peli"
             app:argType="com.example.freeentproject.domain.models.ModeloPeli" />
+        <action
+            android:id="@+id/action_prePeliFragment_to_peliFragment"
+            app:destination="@id/peliFragment" />
     </fragment>
     <activity
         android:id="@+id/exoPlayerPlayPeli"

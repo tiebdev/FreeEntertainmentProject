@@ -78,14 +78,14 @@
     <TextView
         android:id="@+id/textViewTitulo"
         android:textStyle="bold"
-        android:layout_width="600dp"
-        android:layout_height="57dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="150dp"
         android:gravity="center"
         android:textSize="30sp"
         android:fontFamily="@font/montserrat"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
         app:layout_constraintStart_toEndOf="@+id/imgPrePeli"
         app:layout_constraintTop_toTopOf="@id/imgPrePeli" />
 
@@ -94,13 +94,23 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginTop="15dp"
-        android:layout_marginStart="5dp"
+        android:layout_marginEnd="95dp"
         app:icon="@drawable/ic_fav"
         app:iconTint="@color/white"
         app:iconSize="45dp"
-        app:layout_constraintLeft_toRightOf="@+id/textViewTitulo"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/Widget.Material3.Button.IconButton"/>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/ic_back"
+        app:layout_constraintLeft_toRightOf="@id/fav"
+        app:layout_constraintTop_toTopOf="@id/fav"/>
 
     <TextView
         android:id="@+id/textViewDescripcion"

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.freeentproject.R
 import com.example.freeentproject.databinding.FragmentPrePeliBinding
@@ -51,18 +52,29 @@ class PrePeliFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.textViewTitulo.text = pelicula.titulo
-        binding.textViewDescripcion.text = pelicula.descripcion
-        binding.duracionPeli.text = pelicula.duracion
-        binding.lenguajePeli.text = pelicula.lenguaje
-        Utils.loadImage(pelicula.imagen ?: " ", binding.imgPrePeli)
+        sendUrl()
+        configView()
+        insertFav()
+        back()
+    }
 
+    private fun sendUrl() {
         binding.playButton.setOnClickListener() {
             val intent = Intent(context, ExoPlayerPlayPeli::class.java)
             intent.putExtra("url", pelicula.url!!)
             startActivity(intent)
         }
+    }
 
+    private fun configView() {
+        binding.textViewTitulo.text = pelicula.titulo
+        binding.textViewDescripcion.text = pelicula.descripcion
+        binding.duracionPeli.text = pelicula.duracion
+        binding.lenguajePeli.text = pelicula.lenguaje
+        Utils.loadImage(pelicula.imagen ?: " ", binding.imgPrePeli)
+    }
+
+    private fun insertFav() {
         binding.fav.setOnClickListener {
             binding.fav.setIconTintResource(R.color.ALBARICOQUE)
             val db = FirebaseFirestore.getInstance()
@@ -84,6 +96,13 @@ class PrePeliFragment : Fragment() {
                 .addOnFailureListener {
                     Log.d(ContentValues.TAG, "error")
                 }
+        }
+    }
+
+    private fun back() {
+        binding.back.setOnClickListener {
+            val direccion = PrePeliFragmentDirections.actionPrePeliFragmentToPeliFragment()
+            findNavController().navigate(direccion)
         }
     }
 }
