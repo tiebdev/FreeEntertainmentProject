@@ -24,7 +24,7 @@
             android:layout_marginStart="5dp"
             android:fontFamily="@font/montserrat"
             android:gravity="center"
-            android:text="@string/cineFav"
+            android:text="@string/fav"
             android:textColor="@color/white"
             android:textSize="35sp"
             android:textStyle="bold" />
