@@ -1,11 +1,15 @@
 package com.example.freeentproject.ui.activitys
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.Toast
 import com.example.freeentproject.databinding.ActivityExoPlayerPlayTvBinding
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
+import com.google.android.exoplayer2.PlaybackException
+import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.source.MediaSource
 import com.google.android.exoplayer2.source.hls.HlsMediaSource
 import com.google.android.exoplayer2.upstream.DataSource
@@ -27,7 +31,7 @@ de control al pasar unos segundos, etc..
  */
 
 @AndroidEntryPoint
-class ExoPlayerPlayTv : AppCompatActivity() {
+class ExoPlayerPlayTv : AppCompatActivity(), Player.Listener {
 
     private lateinit var binding: ActivityExoPlayerPlayTvBinding
     private lateinit var media: MediaSource
@@ -42,28 +46,28 @@ class ExoPlayerPlayTv : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        reproducir()
+        initializePlayer()
     }
 
     override fun onPause() {
         super.onPause()
-        releasePlayer()
+        release()
     }
 
     override fun onStop() {
         super.onStop()
-        releasePlayer()
+        release()
     }
 
     override fun onResume() {
         super.onResume()
         hideSystemUi()
+        player.prepare()
     }
 
-    private fun releasePlayer() {
+    private fun release() {
         player.stop()
         player.release()
-        finish()
     }
 
     private fun hideSystemUi() {
@@ -73,7 +77,7 @@ class ExoPlayerPlayTv : AppCompatActivity() {
         )
     }
 
-    private fun reproducir() {
+    private fun initializePlayer() {
         player = ExoPlayer.Builder(applicationContext).build()
         binding.videoView.player = player
 
@@ -99,5 +103,10 @@ class ExoPlayerPlayTv : AppCompatActivity() {
 
     enum class URLType(var url: String) {
         HLS("")
+    }
+
+    override fun onPlayerError(error: PlaybackException) {
+        super.onPlayerError(error)
+        Toast.makeText(this@ExoPlayerPlayTv, "${error.message}", Toast.LENGTH_SHORT)
     }
 }

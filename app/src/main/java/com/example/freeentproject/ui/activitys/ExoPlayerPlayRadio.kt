@@ -1,4 +1,5 @@
 package com.example.freeentproject.ui.activitys
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,7 +7,9 @@ import com.example.freeentproject.databinding.ActivityExoPlayerPlayRadioBinding
 import com.example.freeentproject.utils.Utils
 import com.google.android.exoplayer2.ExoPlayer
 import com.google.android.exoplayer2.MediaItem
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ExoPlayerPlayRadio : AppCompatActivity() {
     private lateinit var binding: ActivityExoPlayerPlayRadioBinding
     private lateinit var player: ExoPlayer
@@ -16,6 +19,7 @@ class ExoPlayerPlayRadio : AppCompatActivity() {
         binding = ActivityExoPlayerPlayRadioBinding.inflate(layoutInflater)
         setContentView(binding.root)
         addComponents()
+        back()
     }
 
     override fun onStart() {
@@ -57,4 +61,12 @@ class ExoPlayerPlayRadio : AppCompatActivity() {
     private fun addComponents() {
         Utils.loadImage((intent.getStringExtra("imagen") ?: " "), binding.imgPlayRadio)
     }
+
+    private fun back() {
+        binding.back.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
 }

@@ -1,4 +1,5 @@
 package com.example.freeentproject.ui.activitys
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -37,6 +38,7 @@ class ExoPlayerPlayPeli : AppCompatActivity(), Player.Listener {
         super.onCreate(savedInstanceState)
         binding = ActivityExoPlayerPlayPeliBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        back()
     }
     override fun onStart() {
         super.onStart()
@@ -124,10 +126,12 @@ class ExoPlayerPlayPeli : AppCompatActivity(), Player.Listener {
 
             Player.STATE_BUFFERING -> {
                 binding.isLoading.visibility = View.VISIBLE
+                binding.back.visibility = View.VISIBLE
             }
 
             Player.STATE_READY -> {
                 binding.isLoading.visibility = View.INVISIBLE
+                binding.back.visibility = View.INVISIBLE
             }
         }
     }
@@ -135,5 +139,19 @@ class ExoPlayerPlayPeli : AppCompatActivity(), Player.Listener {
     override fun onPlayerError(error: PlaybackException) {
         super.onPlayerError(error)
         Toast.makeText(this@ExoPlayerPlayPeli, "${error.message}", Toast.LENGTH_SHORT)
+    }
+
+    private fun back() {
+        binding.back.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onIsPlayingChanged(isPlaying: Boolean) {
+        super.onIsPlayingChanged(isPlaying)
+        if (!isPlaying) {
+            binding.back.visibility = View.VISIBLE
+        }
     }
 }
