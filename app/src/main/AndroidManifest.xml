@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
         <activity
+            android:name=".ui.activitys.Login"
+            android:exported="true" />
+        <activity
             android:name=".ui.activitys.SplashScreen"
             android:exported="true"
             android:theme="@style/SplashScreen">
@@ -35,13 +38,9 @@
             android:name=".ui.activitys.ExoPlayerPlayPeli"
             android:exported="false" />
         <activity
-            android:name=".ui.activitys.Login"
-            android:exported="false" />
-        <activity
             android:name=".ui.activitys.MainActivity"
-            android:exported="true"
-            android:screenOrientation="landscape">
-        </activity>
+            android:exported="false"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
