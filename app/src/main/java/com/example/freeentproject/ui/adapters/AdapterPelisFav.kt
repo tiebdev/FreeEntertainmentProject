@@ -1,4 +1,5 @@
 package com.example.freeentproject.ui.adapters
+import android.app.AlertDialog
 import android.content.ContentValues
 import android.util.Log
 import android.view.LayoutInflater
@@ -51,7 +52,7 @@ class AdapterPelisFav  (private var pelisFav: List<ModeloPeli>): RecyclerView.Ad
             }
 
             binding.deleteBut.setOnClickListener {
-                deletePeli(pelisFav[absoluteAdapterPosition].titulo!!)
+                alertDialog()
             }
         }
 
@@ -66,6 +67,19 @@ class AdapterPelisFav  (private var pelisFav: List<ModeloPeli>): RecyclerView.Ad
                 .delete()
                 .addOnSuccessListener { Log.d(ContentValues.TAG, "delete correctly") }
                 .addOnFailureListener { Log.d(ContentValues.TAG,"error delete") }
+        }
+
+        private fun alertDialog() {
+            val alerta = AlertDialog.Builder(itemView.context)
+            alerta.setTitle("Aviso")
+            alerta.setMessage("Desea borrar '${pelisFav[absoluteAdapterPosition].titulo}' de su " +
+                    "lista de favoritos?")
+                .setPositiveButton("Si") {_,_ ->
+                    deletePeli(pelisFav[absoluteAdapterPosition].titulo!!)
+                }
+                .setNegativeButton("No") {_,_ ->}
+            alerta.create()
+            alerta.show()
         }
     }
 }

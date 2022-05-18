@@ -130,7 +130,7 @@
         android:id="@+id/playButton"
         android:layout_width="325dp"
         android:layout_height="185dp"
-        android:src="@drawable/ic_ver_video_play_boton"
+        android:src="@drawable/ic_ver_video_play_botton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"

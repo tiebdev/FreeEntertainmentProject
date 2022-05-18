@@ -13,6 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.NoActionBar">
         <activity
+            android:name=".ui.activitys.SplashScreen"
+            android:exported="true"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ui.activitys.ExoPlayerPlayRadio"
             android:exported="false" />
         <activity
@@ -25,14 +35,12 @@
             android:name=".ui.activitys.ExoPlayerPlayPeli"
             android:exported="false" />
         <activity
+            android:name=".ui.activitys.Login"
+            android:exported="false" />
+        <activity
             android:name=".ui.activitys.MainActivity"
             android:exported="true"
             android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
