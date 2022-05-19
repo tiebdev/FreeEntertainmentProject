@@ -9,6 +9,7 @@ import android.util.Patterns
 import android.widget.Toast
 import com.example.freeentproject.R
 import com.example.freeentproject.databinding.ActivityLoginBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class Login : AppCompatActivity() {
 
@@ -30,6 +31,17 @@ class Login : AppCompatActivity() {
                 mainNavigate()
                 saveUser(email,pass)
             }
+        }
+
+        binding.aboutUs.setOnClickListener {
+            MaterialAlertDialogBuilder(it.context)
+                .setTitle("Información")
+                .setMessage("Free Entertainment Project ha sido creado por Ridouan Tieb, desarrollador" +
+                        " de aplicaciones multiplataforma. ")
+                .setPositiveButton("Entiendo") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .show()
         }
     }
 

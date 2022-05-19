@@ -60,15 +60,6 @@ class AdapterPelisFav  (private var pelisFav: List<ModeloPeli>): RecyclerView.Ad
             Utils.loadImage((cine.imagen ?: "" ), binding.imgFavPeli)
         }
 
-        private fun deletePeli(titulo: String) {
-            val db = FirebaseFirestore.getInstance()
-            db.collection("pelisFav")
-                .document(titulo)
-                .delete()
-                .addOnSuccessListener { Log.d(ContentValues.TAG, "delete correctly") }
-                .addOnFailureListener { Log.d(ContentValues.TAG,"error delete") }
-        }
-
         private fun alertDialog() {
             val alerta = AlertDialog.Builder(itemView.context)
             alerta.setTitle("Aviso")
@@ -81,5 +72,14 @@ class AdapterPelisFav  (private var pelisFav: List<ModeloPeli>): RecyclerView.Ad
             alerta.create()
             alerta.show()
         }
+    }
+
+    fun deletePeli(titulo: String) {
+        val db = FirebaseFirestore.getInstance()
+        db.collection("pelisFav")
+            .document(titulo)
+            .delete()
+            .addOnSuccessListener { Log.d(ContentValues.TAG, "delete correctly") }
+            .addOnFailureListener { Log.d(ContentValues.TAG,"error delete") }
     }
 }
