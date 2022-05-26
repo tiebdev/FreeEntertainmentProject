@@ -38,7 +38,6 @@ class ExoPlayerPlayResumen : AppCompatActivity(), Player.Listener {
         super.onCreate(savedInstanceState)
         binding = ActivityExoPlayerPlayResumenBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        back()
     }
     override fun onStart() {
         super.onStart()
@@ -137,19 +136,5 @@ class ExoPlayerPlayResumen : AppCompatActivity(), Player.Listener {
     override fun onPlayerError(error: PlaybackException) {
         super.onPlayerError(error)
         Toast.makeText(this@ExoPlayerPlayResumen, "${error.message}", Toast.LENGTH_SHORT)
-    }
-
-    private fun back() {
-        binding.back.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-    }
-
-    override fun onIsPlayingChanged(isPlaying: Boolean) {
-        super.onIsPlayingChanged(isPlaying)
-        if (!isPlaying) {
-            binding.back.visibility = View.VISIBLE
-        }
     }
 }
