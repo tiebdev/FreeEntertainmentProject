@@ -1,5 +1,4 @@
 package com.example.freeentproject.ui.activitys
-
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +6,6 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
 import android.widget.Toast
-import com.example.freeentproject.R
 import com.example.freeentproject.databinding.ActivityLoginBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 

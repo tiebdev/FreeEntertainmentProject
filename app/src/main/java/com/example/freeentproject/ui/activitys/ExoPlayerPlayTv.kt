@@ -1,5 +1,4 @@
 package com.example.freeentproject.ui.activitys
-import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -46,7 +46,7 @@ class PelisFavoritasFragment: Fragment(), AdapterPelisFav.PelisClickCallback {
     }
 
     private fun observer() {
-        pelisFavViewModel.pelisFav.observe(viewLifecycleOwner, Observer { it ->
+        pelisFavViewModel.pelisFav.observe(viewLifecycleOwner, Observer {
             adapterPelisFav = AdapterPelisFav(it)
             binding.recyclerPelisFav.layoutManager = GridLayoutManager(context, 3)
             binding.recyclerPelisFav.adapter = adapterPelisFav
