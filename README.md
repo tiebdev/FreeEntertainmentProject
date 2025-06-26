@@ -37,7 +37,7 @@ Este proyecto es de código abierto y puedes utilizarlo, modificarlo y mejorarlo
 
 ## 📬 Contacto
 Si quieres ponerte en contacto conmigo, puedes hacerlo a través de:  
-📩 **Email:** [tieb.dev@gmail.com](mailto:tieb.dev@gmail.com)  
+📩 **Email:** [ridouan@tieb.dev](mailto:ridouan@tieb.dev)  
 🔗 **LinkedIn:** [linkedin.com/in/ridouantieb](https://linkedin.com/in/ridouantieb)  
 
 ---
